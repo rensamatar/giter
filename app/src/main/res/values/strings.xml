@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Giter</string>
+    <string name="action_search">Settings</string>
+    <string name="action_search_hint">Search...</string>
+
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item >HOME</item>
+        <item >Terminology</item>
+        <item >New Repository</item>
+        <item >Showing&#47;Undoing</item>
+        <item >FEEDBACK</item>
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/home</item>
+        <item>@drawable/favorite</item>
+        <item>@drawable/settings</item>
+        <item>@drawable/help</item>
+        <item>@drawable/feedback</item>
+    </array>
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+
+    <!-- Terminology -->
+    <string-array name="terminology_command">
+        <item>repo</item>
+        <item>clone</item>
+        <item>fork (GitHub)</item>
+        <item>commit</item>
+        <item>branch</item>
+        <item>master</item>
+        <item>origin</item>
+        <item>HEAD</item>
+        <item>remote</item>
+    </string-array>
+
+    <string-array name="terminology_description">
+        <item>A place where the history of your work&#47;code is stored</item>
+        <item>Copy a git repository so you can add to it</item>
+        <item>Create your own server side copy of someone else&quot;s repo</item>
+        <item>A state of your project at a certain time</item>
+        <item>A different line of development. A branch is just a &quot;label&quot; which points to a specific commit</item>
+        <item>The default branch we develop in</item>
+        <item>The default upstream repo (GitHub)</item>
+        <item>The current branch</item>
+        <item>A repository stored on another computer</item>
+    </string-array>
+
+    <!-- Repository -->
+    <string-array name="new_repo_command">
+        <item>git init</item>
+        <item>git clone &lt;repo url&gt;</item>
+        <item>git clone &lt;repo url&gt; &lt;folder name&gt;</item>
+        <item>git clone &lt;repo url&gt; &#46;</item>
+        <item>git remote add origin http&#58;&#47;&#47;github.com&#47;username&#47;&lt;repo name&gt;.git</item>
+        <item>git remote add origin git@github.com&#58;username&#47;&lt;repo name&gt;.git</item>
+        <item>git remote</item>
+        <item>git remote &#45;v</item>
+        <item>git remote rm &lt;remote name&gt;</item>
+    </string-array>
+
+    <string-array name="new_repo_description">
+        <item>Create a repo from existing data</item>
+        <item>Clone a current repo (into a folder with same name as repo)</item>
+        <item>Clone a repo into a specific folder name</item>
+        <item>Clone a repo into current directory (should be an empty directory)</item>
+        <item>Create a remote repo named origin pointing at your GitHub repo (after you&quot;ve already created the repo on GitHub) (used if you git init since the repo you created locally isn&quot;t linked to a remote repo yet)</item>
+        <item>Create a remote repo named origin pointing at your GitHub repo (using SSH url instead of HTTP url)</item>
+        <item>Show the names of the remote repositories you&quot;ve set up</item>
+        <item>Show the names and URLs of the remote repositories</item>
+        <item>Remove a remote repository</item>
+    </string-array>
+
+    <!-- Showing/Undoing Changes -->
+    <string-array name="show_undo_command">
+        <item>git status</item>
+        <item>git diff</item>
+        <item>git diff &lt;filename&gt;</item>
+        <item>git diff &lt;commit id&gt; &lt;commit id 2&gt;</item>
+        <item>git log</item>
+        <item>git blame &lt;filename&gt;</item>
+        <item>git reset &#45;hard</item>
+        <item>git revert HEAD</item>
+        <item>git revert &lt;commit id&gt;</item>
+    </string-array>
+
+    <string-array name="show_undo_description">
+        <item>Show the files changed</item>
+        <item>Show changes to files compared to last commit</item>
+        <item>Show changes in single file compared to last commit</item>
+        <item>Show changes between two different commits.</item>
+        <item>Show history of changes</item>
+        <item>Show who changed each line of a file and when</item>
+        <item>Go back to the last commit (will not delete new unstaged files)</item>
+        <item>Undo&#47;revert last commit AND create a new commit</item>
+        <item>Undo&#47;revert a specific commit AND create a new commit</item>
+    </string-array>
+
+</resources>

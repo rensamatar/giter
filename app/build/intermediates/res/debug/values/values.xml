@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- From: file:/home/tar/AndroidstudioProjects/Giter/app/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <array name="nav_drawer_icons">
+        <item>@drawable/home</item>
+        <item>@drawable/favorite</item>
+        <item>@drawable/settings</item>
+        <item>@drawable/help</item>
+        <item>@drawable/feedback</item>
+    </array>
+
+    <string-array name="nav_drawer_items">
+        <item>HOME</item>
+        <item>Terminology</item>
+        <item>New Repository</item>
+        <item>Showing/Undoing</item>
+        <item>FEEDBACK</item>
+    </string-array>
+    <string-array name="new_repo_command">
+        <item>git init</item>
+        <item>git clone &lt;repo url></item>
+        <item>git clone &lt;repo url> &lt;folder name></item>
+        <item>git clone &lt;repo url> .</item>
+        <item>git remote add origin http://github.com/username/&lt;repo name>.git</item>
+        <item>git remote add origin git@github.com:username/&lt;repo name>.git</item>
+        <item>git remote</item>
+        <item>git remote -v</item>
+        <item>git remote rm &lt;remote name></item>
+    </string-array>
+    <string-array name="new_repo_description">
+        <item>Create a repo from existing data</item>
+        <item>Clone a current repo (into a folder with same name as repo)</item>
+        <item>Clone a repo into a specific folder name</item>
+        <item>Clone a repo into current directory (should be an empty directory)</item>
+        <item>Create a remote repo named origin pointing at your GitHub repo (after you"ve already created the repo on GitHub) (used if you git init since the repo you created locally isn"t linked to a remote repo yet)</item>
+        <item>Create a remote repo named origin pointing at your GitHub repo (using SSH url instead of HTTP url)</item>
+        <item>Show the names of the remote repositories you"ve set up</item>
+        <item>Show the names and URLs of the remote repositories</item>
+        <item>Remove a remote repository</item>
+    </string-array>
+    <string-array name="show_undo_command">
+        <item>git status</item>
+        <item>git diff</item>
+        <item>git diff &lt;filename></item>
+        <item>git diff &lt;commit id> &lt;commit id 2></item>
+        <item>git log</item>
+        <item>git blame &lt;filename></item>
+        <item>git reset -hard</item>
+        <item>git revert HEAD</item>
+        <item>git revert &lt;commit id></item>
+    </string-array>
+    <string-array name="show_undo_description">
+        <item>Show the files changed</item>
+        <item>Show changes to files compared to last commit</item>
+        <item>Show changes in single file compared to last commit</item>
+        <item>Show changes between two different commits.</item>
+        <item>Show history of changes</item>
+        <item>Show who changed each line of a file and when</item>
+        <item>Go back to the last commit (will not delete new unstaged files)</item>
+        <item>Undo/revert last commit AND create a new commit</item>
+        <item>Undo/revert a specific commit AND create a new commit</item>
+    </string-array>
+    <string-array name="terminology_command">
+        <item>repo</item>
+        <item>clone</item>
+        <item>fork (GitHub)</item>
+        <item>commit</item>
+        <item>branch</item>
+        <item>master</item>
+        <item>origin</item>
+        <item>HEAD</item>
+        <item>remote</item>
+    </string-array>
+    <string-array name="terminology_description">
+        <item>A place where the history of your work/code is stored</item>
+        <item>Copy a git repository so you can add to it</item>
+        <item>Create your own server side copy of someone else"s repo</item>
+        <item>A state of your project at a certain time</item>
+        <item>A different line of development. A branch is just a "label" which points to a specific commit</item>
+        <item>The default branch we develop in</item>
+        <item>The default upstream repo (GitHub)</item>
+        <item>The current branch</item>
+        <item>A repository stored on another computer</item>
+    </string-array>
+    <!-- From: file:/home/tar/AndroidstudioProjects/Giter/app/src/main/res/values/color.xml -->
+    <eat-comment />
+
+    <color name="about_logo_bg">#efefef</color>
+    <color name="black">#303030</color>
+    <color name="black_trans">#e0000000</color>
+    <color name="blue">#33B5E5</color>
+    <color name="blue_pressed">#0099CC</color>
+    <color name="counter_text_bg">#CC0000</color>
+    <color name="counter_text_color">#ffffff</color>
+    <color name="dark_black">#1e1e1e</color>
+    <color name="gray">#e5e5e5</color>
+    <color name="gray_pressed">#c6c6c6</color>
+    <color name="green">#99CC00</color>
+    <color name="green_pressed">#669900</color>
+    <color name="light_blue">#bfe1f1</color>
+    <color name="light_green">#8cc9ac</color>
+    <color name="light_purple">#d4b2e5</color>
+    <color name="light_red">#ff7f7f</color>
+    <color name="light_yellow">#fff87f</color>
+    <color name="list_background">#303030</color>
+    <color name="list_background_pressed">#FF4444</color>
+    <color name="list_divider">#272727</color>
+    <color name="list_item_title">#fff</color>
+    <color name="purple">#AA66CC</color>
+    <color name="purple_pressed">#9933CC</color>
+    <color name="red">#FF4444</color>
+    <color name="red_pressed">#CC0000</color>
+    <color name="text_result_gray">#333333</color>
+    <color name="white">#ffffff</color>
+    <color name="white_trans">#f9f9f9</color>
+    <color name="yellow">#FFBB33</color>
+    <color name="yellow_pressed">#FF8800</color>
+    <!-- From: file:/home/tar/AndroidstudioProjects/Giter/app/src/main/res/values/dimens.xml -->
+    <eat-comment />
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- From: file:/home/tar/AndroidstudioProjects/Giter/app/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string name="action_search">Settings</string>
+    <string name="action_search_hint">Search...</string>
+    <string name="app_name">Giter</string>
+    <string name="desc_list_item_icon">Item Icon</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+    <string name="drawer_open">Slider Menu Opened</string>
+    <!-- From: file:/home/tar/AndroidstudioProjects/Giter/app/src/main/res/values/styles.xml -->
+    <eat-comment />
+
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <style name="AppTextStyle">
+        <item name="android:textColor">@color/list_divider</item>
+    </style>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+</resources>

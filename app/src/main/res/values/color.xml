@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    <color name="white">#ffffff</color>
+    <color name="black">#303030</color>
+    <color name="dark_black">#1e1e1e</color>
+    <color name="blue">#33b5e5</color>
+    <color name="blue_pressed">#0099cc</color>
+    <color name="red">#ff4444</color>
+    <color name="red_pressed">#cc0000</color>
+    <color name="green">#99cc00</color>
+    <color name="green_pressed">#669900</color>
+    <color name="purple">#aa66cc</color>
+    <color name="purple_pressed">#9933cc</color>
+    <color name="list_item_title">#fff</color>
+    <color name="list_background">#303030</color>
+    <color name="list_background_pressed">#99CC00</color>
+    <color name="list_divider">#272727</color>
+    <color name="counter_text_bg">#626262</color>
+    <color name="counter_text_color">#c5c4c4</color>
+    -->
+
+    <color name="about_logo_bg">#efefef</color>
+    <color name="gray">#e5e5e5</color>
+    <color name="gray_pressed">#c6c6c6</color>
+    <color name="white">#ffffff</color>
+    <color name="white_trans">#f9f9f9</color>
+    <color name="black">#303030</color>
+    <color name="black_trans">#e0000000</color>
+    <color name="dark_black">#1e1e1e</color>
+    <color name="blue">#33B5E5</color>
+    <color name="blue_pressed">#0099CC</color>
+    <color name="red">#FF4444</color>
+    <color name="red_pressed">#CC0000</color>
+    <color name="green">#99CC00</color>
+    <color name="green_pressed">#669900</color>
+    <color name="purple">#AA66CC</color>
+    <color name="purple_pressed">#9933CC</color>
+    <color name="yellow">#FFBB33</color>
+    <color name="yellow_pressed">#FF8800</color>
+    <color name="list_item_title">#fff</color>
+    <color name="list_background">#303030</color>
+    <color name="list_background_pressed">#FF4444</color>
+    <color name="list_divider">#272727</color>
+    <color name="counter_text_bg">#CC0000</color>
+    <color name="counter_text_color">#ffffff</color>
+    <color name="light_blue">#bfe1f1</color>
+    <color name="light_green">#8cc9ac</color>
+    <color name="light_purple">#d4b2e5</color>
+    <color name="light_red">#ff7f7f</color>
+    <color name="light_yellow">#fff87f</color>
+    <color name="text_result_gray">#333333</color>
+
+</resources>
