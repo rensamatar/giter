@@ -51,5 +51,6 @@
     <color name="light_red">#ff7f7f</color>
     <color name="light_yellow">#fff87f</color>
     <color name="text_result_gray">#333333</color>
+    <color name="bg_gray">#e2e2e2</color>
 
 </resources>

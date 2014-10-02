@@ -24,7 +24,7 @@ public class TerminologyFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_terminology, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_listview, container, false);
         return rootView;
     }
 

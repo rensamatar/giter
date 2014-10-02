@@ -2,11 +2,15 @@ package com.tarconcept.ahoy;
 
 import java.util.ArrayList;
 
+import com.tarconcept.fragment.BranchingFragment;
 import com.tarconcept.fragment.NewRepoFragment;
+import com.tarconcept.fragment.PublishingFragment;
 import com.tarconcept.fragment.ShowUndoChangeFragment;
+import com.tarconcept.fragment.StagingFragment;
 import com.tarconcept.fragment.TerminologyFragment;
 import com.tarconcept.fragment.FeedBackFragment;
 import com.tarconcept.fragment.HomeFragment;
+import com.tarconcept.fragment.UpdatingFragment;
 import com.tarconcept.model.NavDrawerItem;
 import com.tarconcept.model.NavDrawerListAdapter;
 import android.os.Bundle;
@@ -28,150 +32,169 @@ import android.widget.SearchView;
 
 public class MainActivity extends FragmentActivity {
 
-	private DrawerLayout mDrawerLayout;
-	private ListView mDrawerList;
-	private ActionBarDrawerToggle mDrawerToggle;
-	private CharSequence mDrawerTitle;
-	private CharSequence mTitle;
-	private String[] navMenuTitles;
-	private TypedArray navMenuIcons;
-	private ArrayList<NavDrawerItem> navDrawerItems;
-	private NavDrawerListAdapter adapter;
+    private DrawerLayout mDrawerLayout;
+    private ListView mDrawerList;
+    private ActionBarDrawerToggle mDrawerToggle;
+    private CharSequence mDrawerTitle;
+    private CharSequence mTitle;
+    private String[] navMenuTitles;
+    private TypedArray navMenuIcons;
+    private ArrayList<NavDrawerItem> navDrawerItems;
+    private NavDrawerListAdapter adapter;
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-		overridePendingTransition(R.anim.activity_open_translate, R.anim.activity_close_scale);
-		mTitle = mDrawerTitle = getTitle();
-		navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
-		navMenuIcons = getResources().obtainTypedArray(R.array.nav_drawer_icons);
-		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-		mDrawerList = (ListView) findViewById(R.id.list_slidermenu);
-		navDrawerItems = new ArrayList<NavDrawerItem>();
-		navDrawerItems.add(new NavDrawerItem(navMenuTitles[0], navMenuIcons.getResourceId(0, -1)));
-		navDrawerItems.add(new NavDrawerItem(navMenuTitles[1], navMenuIcons.getResourceId(1, -1)));
-		navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], navMenuIcons.getResourceId(2, -1)));
-		navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(3, -1)));
-		navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));
-		navMenuIcons.recycle();
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        overridePendingTransition(R.anim.activity_open_translate, R.anim.activity_close_scale);
+        mTitle = mDrawerTitle = getTitle();
+        navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
+        navMenuIcons = getResources().obtainTypedArray(R.array.nav_drawer_icons);
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mDrawerList = (ListView) findViewById(R.id.list_slidermenu);
+        navDrawerItems = new ArrayList<NavDrawerItem>();
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[0], navMenuIcons.getResourceId(0, -1)));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[1], navMenuIcons.getResourceId(1, -1)));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], navMenuIcons.getResourceId(2, -1)));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(3, -1)));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1)));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[6], navMenuIcons.getResourceId(6, -1)));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[7], navMenuIcons.getResourceId(7, -1)));
+        navMenuIcons.recycle();
 
-		mDrawerList.setOnItemClickListener(new SlideMenuClickListener());
-		adapter = new NavDrawerListAdapter(getApplicationContext(), navDrawerItems);
-		mDrawerList.setAdapter(adapter);
-		getActionBar().setDisplayHomeAsUpEnabled(true);
-		getActionBar().setHomeButtonEnabled(true);
-		getActionBar().setIcon(R.drawable.home);
+        mDrawerList.setOnItemClickListener(new SlideMenuClickListener());
+        adapter = new NavDrawerListAdapter(getApplicationContext(), navDrawerItems);
+        mDrawerList.setAdapter(adapter);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getActionBar().setHomeButtonEnabled(true);
+        getActionBar().setIcon(R.drawable.home);
 
-		mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
-				R.drawable.ic_drawer, // nav menu toggle icon
-				R.string.app_name, // nav drawer open - description for
-				R.string.app_name // nav drawer close - description for
-				) {
-			public void onDrawerClosed(View view) {
-				getActionBar().setTitle(mTitle);
-				invalidateOptionsMenu();
-			}
+        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
+                R.drawable.ic_drawer, // nav menu toggle icon
+                R.string.app_name, // nav drawer open - description for
+                R.string.app_name // nav drawer close - description for
+        ) {
+            public void onDrawerClosed(View view) {
+                getActionBar().setTitle(mTitle);
+                invalidateOptionsMenu();
+            }
 
-			public void onDrawerOpened(View drawerView) {
-				getActionBar().setTitle(mDrawerTitle);
-				invalidateOptionsMenu();
-			}
-		};
-		mDrawerLayout.setDrawerListener(mDrawerToggle);
-		if (savedInstanceState == null) {
-			displayView(0);
-		}
-	}
+            public void onDrawerOpened(View drawerView) {
+                getActionBar().setTitle(mDrawerTitle);
+                invalidateOptionsMenu();
+            }
+        };
+        mDrawerLayout.setDrawerListener(mDrawerToggle);
+        if (savedInstanceState == null) {
+            displayView(0);
+        }
+    }
 
-	private class SlideMenuClickListener implements ListView.OnItemClickListener {
-		@Override
-		public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-			displayView(position);
-		}
-	}
+    private class SlideMenuClickListener implements ListView.OnItemClickListener {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            displayView(position);
+        }
+    }
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.main, menu);
-		// Associate searchable configuration with the SearchView
-	    SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-	    MenuItem item = menu.findItem(R.id.action_search);
-	    SearchView mSearchView = (SearchView) MenuItemCompat.getActionView(item);  
-	    mSearchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
-		return true;
-	}
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        // Associate searchable configuration with the SearchView
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        MenuItem item = menu.findItem(R.id.action_search);
+        SearchView mSearchView = (SearchView) MenuItemCompat.getActionView(item);
+        mSearchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+        return true;
+    }
 
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		if (mDrawerToggle.onOptionsItemSelected(item)) {
-			return true;
-		}
-		switch (item.getItemId()) {
-		case R.id.action_search:
-			return true;
-		default:
-			return super.onOptionsItemSelected(item);
-		}
-	}
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (mDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+        switch (item.getItemId()) {
+            case R.id.action_search:
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
-	@Override
-	public boolean onPrepareOptionsMenu(Menu menu) {
-		boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
-		menu.findItem(R.id.action_search).setVisible(!drawerOpen);
-		return super.onPrepareOptionsMenu(menu);
-	}
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
+        menu.findItem(R.id.action_search).setVisible(!drawerOpen);
+        return super.onPrepareOptionsMenu(menu);
+    }
 
-	private void displayView(int position) {
-		FragmentTransaction trans = getFragmentManager().beginTransaction();
-		switch (position) {
-		case 0:
-			HomeFragment home = new HomeFragment();
-			trans.replace(R.id.frame_container, home);
-			break;
-		case 1:
-			TerminologyFragment term = new TerminologyFragment();
-			trans.replace(R.id.frame_container, term);
-			break;
-		case 2:
-			NewRepoFragment newrepo = new NewRepoFragment();
-			trans.replace(R.id.frame_container, newrepo);
-			break;
-		case 3:
-			ShowUndoChangeFragment help = new ShowUndoChangeFragment();
-			trans.replace(R.id.frame_container, help);
-			break;
-		case 4:
-			FeedBackFragment feedback = new FeedBackFragment();
-			trans.replace(R.id.frame_container, feedback);
-			break;
+    private void displayView(int position) {
+        FragmentTransaction trans = getFragmentManager().beginTransaction();
+        switch (position) {
+            case 0:
+                HomeFragment home = new HomeFragment();
+                trans.replace(R.id.frame_container, home);
+                break;
+            case 1:
+                TerminologyFragment term = new TerminologyFragment();
+                trans.replace(R.id.frame_container, term);
+                break;
+            case 2:
+                NewRepoFragment newrepo = new NewRepoFragment();
+                trans.replace(R.id.frame_container, newrepo);
+                break;
+            case 3:
+                ShowUndoChangeFragment help = new ShowUndoChangeFragment();
+                trans.replace(R.id.frame_container, help);
+                break;
+            case 4:
+                StagingFragment staging = new StagingFragment();
+                trans.replace(R.id.frame_container, staging);
+                break;
+            case 5:
+                PublishingFragment publishing = new PublishingFragment();
+                trans.replace(R.id.frame_container, publishing);
+                break;
+            case 6:
+                UpdatingFragment update = new UpdatingFragment();
+                trans.replace(R.id.frame_container, update);
+                break;
+            case 7:
+                BranchingFragment branch = new BranchingFragment();
+                trans.replace(R.id.frame_container, branch);
+                break;
+            case 8:
+                FeedBackFragment feedback = new FeedBackFragment();
+                trans.replace(R.id.frame_container, feedback);
+                break;
 
-		default:
-			break;
-		}
-		trans.commit();
-		mDrawerList.setItemChecked(position, true);
-		mDrawerList.setSelection(position);
-		setTitle(navMenuTitles[position]);
-		mDrawerLayout.closeDrawer(mDrawerList);
-	}
+            default:
+                break;
+        }
+        trans.commit();
+        mDrawerList.setItemChecked(position, true);
+        mDrawerList.setSelection(position);
+        setTitle(navMenuTitles[position]);
+        mDrawerLayout.closeDrawer(mDrawerList);
+    }
 
-	@Override
-	public void setTitle(CharSequence title) {
-		mTitle = title;
-		getActionBar().setTitle(mTitle);
-	}
+    @Override
+    public void setTitle(CharSequence title) {
+        mTitle = title;
+        getActionBar().setTitle(mTitle);
+    }
 
-	@Override
-	protected void onPostCreate(Bundle savedInstanceState) {
-		super.onPostCreate(savedInstanceState);
-		mDrawerToggle.syncState();
-	}
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        mDrawerToggle.syncState();
+    }
 
-	@Override
-	public void onConfigurationChanged(Configuration newConfig) {
-		super.onConfigurationChanged(newConfig);
-		mDrawerToggle.onConfigurationChanged(newConfig);
-	}
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        mDrawerToggle.onConfigurationChanged(newConfig);
+    }
 
 }

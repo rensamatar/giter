@@ -30,7 +30,7 @@ public class ItemGitArrayAdapter extends ArrayAdapter<ItemGit> {
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null || convertView.getTag() == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.list_itemgit, parent, false);
+            convertView = inflater.inflate(R.layout.list_item, parent, false);
 
             ItemHolder holder = new ItemHolder();
             holder.parentView = (RelativeLayout) convertView.findViewById(R.id.parentView);

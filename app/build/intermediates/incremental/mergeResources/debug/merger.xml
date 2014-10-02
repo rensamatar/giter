@@ -103,6 +103,84 @@ Undo/revert last commit AND create a new commit
 Undo/revert a specific commit AND create a new commit
                     </item>
                 </string-array>
+                <string-array name="branching_command" >
+                    <item>
+git branch
+                    </item>
+                    <item>
+git branch -a
+                    </item>
+                    <item>
+git branch &lt;branch name>
+                    </item>
+                    <item>
+git checkout -b &lt;branch name>
+                    </item>
+                    <item>
+git checkout &lt;branch name>
+                    </item>
+                    <item>
+git push origin &lt;branch name>
+                    </item>
+                    <item>
+git checkout -b &lt;new branch name> origin/&lt;branch name>
+                    </item>
+                    <item>
+git push origin -delete &lt;branch name>
+                    </item>
+                    <item>
+git checkout master git merge &lt;branch name>
+                    </item>
+                    <item>
+git rebase &lt;branch name>
+                    </item>
+                    <item>
+git cherry-pick &lt;commit id>
+                    </item>
+                </string-array>
+                <string-array name="updating_description" >
+                    <item>
+Get the latest changes from origin (do not merge)
+                    </item>
+                    <item>
+Get the latest changes from origin AND merge
+                    </item>
+                    <item>
+Get a remote branch from origin into a local branch (naming the branch and switching to it)
+                    </item>
+                </string-array>
+                <string-array name="publishing_description" >
+                    <item>
+Commit the local changes that were staged
+                    </item>
+                    <item>
+Stage files (modified and deleted, not new) and commit
+                    </item>
+                    <item>
+Take the uncommitted work (modified tracked files and staged changes) and saves it
+                    </item>
+                    <item>
+Show list of stashes
+                    </item>
+                    <item>
+Reapply the latest stashed contents
+                    </item>
+                    <item>
+Reapply a specific stash. (stash id = stash@{2})
+                    </item>
+                    <item>
+Drop a specific stash
+                    </item>
+                    <item>
+Push your changes to the origin
+                    </item>
+                    <item>
+Push a branch to the origin
+                    </item>
+                    <item>
+Tag a version (ie v1.0). Useful for Github releases.
+                    </item>
+                </string-array>
 
                 <string name="drawer_close" >Slider Menu Closed
                 </string>
@@ -156,7 +234,51 @@ New Repository
 Showing/Undoing
                     </item>
                     <item>
-FEEDBACK
+Staging
+                    </item>
+                    <item>
+Publishing
+                    </item>
+                    <item>
+Updating/Getting
+                    </item>
+                    <item>
+Branching
+                    </item>
+                </string-array>
+                <string-array name="branching_description" >
+                    <item>
+Show all branches (local)
+                    </item>
+                    <item>
+Show all branches (local and remote)
+                    </item>
+                    <item>
+Create a branch from HEAD
+                    </item>
+                    <item>
+Create a new branch and switch to it
+                    </item>
+                    <item>
+Switch to an already created branch
+                    </item>
+                    <item>
+Push a branch up to the origin (GitHub)
+                    </item>
+                    <item>
+Get a remote branch from origin into a local branch (naming the branch and switching to it)
+                    </item>
+                    <item>
+Delete a branch locally and remotely
+                    </item>
+                    <item>
+Merge a specific branch into the master branch.
+                    </item>
+                    <item>
+Take all the changes in one branch and replay them on another. Usually used in a feature branch. Rebase the master to the feature branch so you are testing your feature on the latest main code base. Then merge to the master.
+                    </item>
+                    <item>
+Merge just one specific commit from another branch to your current branch.
                     </item>
                 </string-array>
 
@@ -190,6 +312,23 @@ git remote -v
                     </item>
                     <item>
 git remote rm &lt;remote name>
+                    </item>
+                </string-array>
+                <string-array name="staging_command" >
+                    <item>
+git add -A
+                    </item>
+                    <item>
+git add .
+                    </item>
+                    <item>
+git add -u
+                    </item>
+                    <item>
+git rm &lt;filename>
+                    </item>
+                    <item>
+git rm &lt;filename> -cached
                     </item>
                 </string-array>
                 <string-array name="show_undo_command" >
@@ -236,6 +375,15 @@ git revert &lt;commit id>
 @drawable/help
                     </item>
                     <item>
+@drawable/help
+                    </item>
+                    <item>
+@drawable/feedback
+                    </item>
+                    <item>
+@drawable/feedback
+                    </item>
+                    <item>
 @drawable/feedback
                     </item>
                 </array>
@@ -272,9 +420,60 @@ Remove a remote repository
 
                 <string name="action_search" >Settings
                 </string>
+
+                <string-array name="staging_description" >
+                    <item>
+Stage all files (new, modified, and deleted)
+                    </item>
+                    <item>
+Stage new and modified files (not deleted)
+                    </item>
+                    <item>
+Stage modified and deleted files (not new)
+                    </item>
+                    <item>
+Remove a file and untrack it
+                    </item>
+                    <item>
+Untrack a file only. It will still exist. Usually you will add this file to .gitignore after rm
+                    </item>
+                </string-array>
+
                 <string name="drawer_open" >Slider Menu Opened
                 </string>
 
+                <string-array name="publishing_command" >
+                    <item>
+git commit -m "message"
+                    </item>
+                    <item>
+git commit -am "message"
+                    </item>
+                    <item>
+git stash
+                    </item>
+                    <item>
+git stash list
+                    </item>
+                    <item>
+git stash apply
+                    </item>
+                    <item>
+git stash apply &lt;stash id>
+                    </item>
+                    <item>
+git stash drop &lt;stash id>
+                    </item>
+                    <item>
+git push
+                    </item>
+                    <item>
+git push origin &lt;local branch name>
+                    </item>
+                    <item>
+git tag &lt;tag name>
+                    </item>
+                </string-array>
                 <string-array name="terminology_command" >
                     <item>
 repo
@@ -302,6 +501,17 @@ HEAD
                     </item>
                     <item>
 remote
+                    </item>
+                </string-array>
+                <string-array name="updating_command" >
+                    <item>
+git fetch
+                    </item>
+                    <item>
+git pull
+                    </item>
+                    <item>
+git checkout -b &lt;new branch name> origin/&lt;branch name>
                     </item>
                 </string-array>
             </file>
@@ -353,6 +563,8 @@ remote
                 <color name="list_item_title" >#fff
                 </color>
                 <color name="counter_text_bg" >#CC0000
+                </color>
+                <color name="bg_gray" >#e2e2e2
                 </color>
                 <color name="gray_pressed" >#c6c6c6
                 </color>
@@ -623,6 +835,11 @@ remote
                 qualifiers=""
                 type="layout" />
             <file
+                name="fragment_listview"
+                path="/home/tar/AndroidstudioProjects/Giter/app/src/main/res/layout/fragment_listview.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="fragment_home"
                 path="/home/tar/AndroidstudioProjects/Giter/app/src/main/res/layout/fragment_home.xml"
                 qualifiers=""
@@ -638,13 +855,13 @@ remote
                 qualifiers=""
                 type="layout" />
             <file
-                name="fragment_setting"
-                path="/home/tar/AndroidstudioProjects/Giter/app/src/main/res/layout/fragment_setting.xml"
+                name="list_item"
+                path="/home/tar/AndroidstudioProjects/Giter/app/src/main/res/layout/list_item.xml"
                 qualifiers=""
                 type="layout" />
             <file
-                name="list_itemgit"
-                path="/home/tar/AndroidstudioProjects/Giter/app/src/main/res/layout/list_itemgit.xml"
+                name="fragment_setting"
+                path="/home/tar/AndroidstudioProjects/Giter/app/src/main/res/layout/fragment_setting.xml"
                 qualifiers=""
                 type="layout" />
             <file
@@ -713,20 +930,10 @@ remote
                 qualifiers=""
                 type="xml" />
             <file
-                name="fragment_terminology"
-                path="/home/tar/AndroidstudioProjects/Giter/app/src/main/res/layout/fragment_terminology.xml"
+                name="bg_card"
+                path="/home/tar/AndroidstudioProjects/Giter/app/src/main/res/drawable/bg_card.xml"
                 qualifiers=""
-                type="layout" />
-            <file
-                name="fragment_newrepo"
-                path="/home/tar/AndroidstudioProjects/Giter/app/src/main/res/layout/fragment_newrepo.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="fragment_show_undo_change"
-                path="/home/tar/AndroidstudioProjects/Giter/app/src/main/res/layout/fragment_show_undo_change.xml"
-                qualifiers=""
-                type="layout" />
+                type="drawable" />
         </source>
         <source path="/home/tar/AndroidstudioProjects/Giter/app/build/generated/res/rs/debug" />
         <source path="/home/tar/AndroidstudioProjects/Giter/app/build/generated/res/generated/debug" />

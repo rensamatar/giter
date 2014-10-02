@@ -15,84 +15,92 @@ public final class R {
         public static final int activity_open_translate=0x7f040003;
     }
     public static final class array {
-        public static final int nav_drawer_icons=0x7f060000;
-        public static final int nav_drawer_items=0x7f060001;
-        public static final int new_repo_command=0x7f060002;
-        public static final int new_repo_description=0x7f060003;
-        public static final int show_undo_command=0x7f060004;
-        public static final int show_undo_description=0x7f060005;
-        public static final int terminology_command=0x7f060006;
-        public static final int terminology_description=0x7f060007;
+        public static final int branching_command=0x7f060000;
+        public static final int branching_description=0x7f060001;
+        public static final int nav_drawer_icons=0x7f060002;
+        public static final int nav_drawer_items=0x7f060003;
+        public static final int new_repo_command=0x7f060004;
+        public static final int new_repo_description=0x7f060005;
+        public static final int publishing_command=0x7f060006;
+        public static final int publishing_description=0x7f060007;
+        public static final int show_undo_command=0x7f060008;
+        public static final int show_undo_description=0x7f060009;
+        public static final int staging_command=0x7f06000a;
+        public static final int staging_description=0x7f06000b;
+        public static final int terminology_command=0x7f06000c;
+        public static final int terminology_description=0x7f06000d;
+        public static final int updating_command=0x7f06000e;
+        public static final int updating_description=0x7f06000f;
     }
     public static final class attr {
     }
     public static final class color {
         public static final int about_logo_bg=0x7f070000;
-        public static final int black=0x7f070001;
-        public static final int black_trans=0x7f070002;
-        public static final int blue=0x7f070003;
-        public static final int blue_pressed=0x7f070004;
-        public static final int counter_text_bg=0x7f070005;
-        public static final int counter_text_color=0x7f070006;
-        public static final int dark_black=0x7f070007;
-        public static final int gray=0x7f070008;
-        public static final int gray_pressed=0x7f070009;
-        public static final int green=0x7f07000a;
-        public static final int green_pressed=0x7f07000b;
-        public static final int light_blue=0x7f07000c;
-        public static final int light_green=0x7f07000d;
-        public static final int light_purple=0x7f07000e;
-        public static final int light_red=0x7f07000f;
-        public static final int light_yellow=0x7f070010;
-        public static final int list_background=0x7f070011;
-        public static final int list_background_pressed=0x7f070012;
-        public static final int list_divider=0x7f070013;
-        public static final int list_item_title=0x7f070014;
-        public static final int purple=0x7f070015;
-        public static final int purple_pressed=0x7f070016;
-        public static final int red=0x7f070017;
-        public static final int red_pressed=0x7f070018;
-        public static final int text_result_gray=0x7f070019;
-        public static final int white=0x7f07001a;
-        public static final int white_trans=0x7f07001b;
-        public static final int yellow=0x7f07001c;
-        public static final int yellow_pressed=0x7f07001d;
+        public static final int bg_gray=0x7f070001;
+        public static final int black=0x7f070002;
+        public static final int black_trans=0x7f070003;
+        public static final int blue=0x7f070004;
+        public static final int blue_pressed=0x7f070005;
+        public static final int counter_text_bg=0x7f070006;
+        public static final int counter_text_color=0x7f070007;
+        public static final int dark_black=0x7f070008;
+        public static final int gray=0x7f070009;
+        public static final int gray_pressed=0x7f07000a;
+        public static final int green=0x7f07000b;
+        public static final int green_pressed=0x7f07000c;
+        public static final int light_blue=0x7f07000d;
+        public static final int light_green=0x7f07000e;
+        public static final int light_purple=0x7f07000f;
+        public static final int light_red=0x7f070010;
+        public static final int light_yellow=0x7f070011;
+        public static final int list_background=0x7f070012;
+        public static final int list_background_pressed=0x7f070013;
+        public static final int list_divider=0x7f070014;
+        public static final int list_item_title=0x7f070015;
+        public static final int purple=0x7f070016;
+        public static final int purple_pressed=0x7f070017;
+        public static final int red=0x7f070018;
+        public static final int red_pressed=0x7f070019;
+        public static final int text_result_gray=0x7f07001a;
+        public static final int white=0x7f07001b;
+        public static final int white_trans=0x7f07001c;
+        public static final int yellow=0x7f07001d;
+        public static final int yellow_pressed=0x7f07001e;
     }
     public static final class dimen {
         public static final int activity_horizontal_margin=0x7f080000;
         public static final int activity_vertical_margin=0x7f080001;
     }
     public static final class drawable {
-        public static final int cancel=0x7f020000;
-        public static final int counter_bg=0x7f020001;
-        public static final int favorite=0x7f020002;
-        public static final int feedback=0x7f020003;
-        public static final int help=0x7f020004;
-        public static final int home=0x7f020005;
-        public static final int ic_drawer=0x7f020006;
-        public static final int ic_launcher=0x7f020007;
-        public static final int list_item_bg_normal=0x7f020008;
-        public static final int list_item_bg_pressed=0x7f020009;
-        public static final int list_selector=0x7f02000a;
-        public static final int mic=0x7f02000b;
-        public static final int pin=0x7f02000c;
-        public static final int previous=0x7f02000d;
-        public static final int search=0x7f02000e;
-        public static final int settings=0x7f02000f;
+        public static final int bg_card=0x7f020000;
+        public static final int cancel=0x7f020001;
+        public static final int counter_bg=0x7f020002;
+        public static final int favorite=0x7f020003;
+        public static final int feedback=0x7f020004;
+        public static final int help=0x7f020005;
+        public static final int home=0x7f020006;
+        public static final int ic_drawer=0x7f020007;
+        public static final int ic_launcher=0x7f020008;
+        public static final int list_item_bg_normal=0x7f020009;
+        public static final int list_item_bg_pressed=0x7f02000a;
+        public static final int list_selector=0x7f02000b;
+        public static final int mic=0x7f02000c;
+        public static final int pin=0x7f02000d;
+        public static final int previous=0x7f02000e;
+        public static final int search=0x7f02000f;
+        public static final int settings=0x7f020010;
     }
     public static final class id {
-        public static final int action_search=0x7f0c000e;
-        public static final int command=0x7f0c000c;
+        public static final int action_search=0x7f0c000c;
+        public static final int command=0x7f0c000a;
         public static final int counter=0x7f0c0007;
-        public static final int description=0x7f0c000d;
+        public static final int description=0x7f0c000b;
         public static final int drawer_layout=0x7f0c0000;
         public static final int frame_container=0x7f0c0002;
         public static final int icon=0x7f0c0005;
-        public static final int listNewRepo=0x7f0c0008;
-        public static final int listShow=0x7f0c0009;
-        public static final int listTerm=0x7f0c000a;
+        public static final int listTerm=0x7f0c0008;
         public static final int list_slidermenu=0x7f0c0003;
-        public static final int parentView=0x7f0c000b;
+        public static final int parentView=0x7f0c0009;
         public static final int profile=0x7f0c0001;
         public static final int title=0x7f0c0006;
         public static final int txtQuery=0x7f0c0004;
@@ -103,11 +111,9 @@ public final class R {
         public static final int drawer_list_item=0x7f030002;
         public static final int fragment_feedback=0x7f030003;
         public static final int fragment_home=0x7f030004;
-        public static final int fragment_newrepo=0x7f030005;
+        public static final int fragment_listview=0x7f030005;
         public static final int fragment_setting=0x7f030006;
-        public static final int fragment_show_undo_change=0x7f030007;
-        public static final int fragment_terminology=0x7f030008;
-        public static final int list_itemgit=0x7f030009;
+        public static final int list_item=0x7f030007;
     }
     public static final class menu {
         public static final int main=0x7f0b0000;

@@ -25,7 +25,7 @@ public class NewRepoFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_newrepo, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_listview, container, false);
         return rootView;
     }
 
@@ -52,7 +52,7 @@ public class NewRepoFragment extends Fragment {
         allItem.add(new ItemGit(head[8], body[8]));
 
         gitAdapter = new ItemGitArrayAdapter(getActivity(), allItem);
-        listTerm = (ListView) getActivity().findViewById(R.id.listNewRepo);
+        listTerm = (ListView) getActivity().findViewById(R.id.listTerm);
         listTerm.setAdapter(gitAdapter);
     }
 

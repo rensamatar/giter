@@ -1,17 +1,19 @@
 package com.tarconcept.fragment;
 
-import com.tarconcept.ahoy.R;
-import com.tarconcept.model.ItemGit;
-import com.tarconcept.model.ItemGitArrayAdapter;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+
+import com.tarconcept.ahoy.R;
+import com.tarconcept.model.ItemGit;
+import com.tarconcept.model.ItemGitArrayAdapter;
+
 import java.util.ArrayList;
 
-public class ShowUndoChangeFragment extends Fragment {
+public class BranchingFragment extends Fragment {
 
     private ListView listTerm;
     private String[] head;
@@ -19,7 +21,7 @@ public class ShowUndoChangeFragment extends Fragment {
     private ArrayList<ItemGit> allItem = null;
     private ItemGitArrayAdapter gitAdapter = null;
 
-    public ShowUndoChangeFragment() {}
+    public BranchingFragment() {}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -35,8 +37,8 @@ public class ShowUndoChangeFragment extends Fragment {
 
     private void initializeComponentData() {
 
-        head = getResources().getStringArray(R.array.show_undo_command);
-        body = getResources().getStringArray(R.array.show_undo_description);
+        head = getResources().getStringArray(R.array.branching_command);
+        body = getResources().getStringArray(R.array.branching_description);
 
         allItem = new ArrayList<ItemGit>();
         allItem.add(new ItemGit(head[0], body[0]));
@@ -48,11 +50,12 @@ public class ShowUndoChangeFragment extends Fragment {
         allItem.add(new ItemGit(head[6], body[6]));
         allItem.add(new ItemGit(head[7], body[7]));
         allItem.add(new ItemGit(head[8], body[8]));
+        allItem.add(new ItemGit(head[9], body[9]));
+        allItem.add(new ItemGit(head[10], body[10]));
 
         gitAdapter = new ItemGitArrayAdapter(getActivity(), allItem);
         listTerm = (ListView) getActivity().findViewById(R.id.listTerm);
         listTerm.setAdapter(gitAdapter);
     }
+
 }
-
-
