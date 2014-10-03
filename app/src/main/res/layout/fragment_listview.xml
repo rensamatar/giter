@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
+                android:padding="10dp"
                 android:layout_height="match_parent" >
 
     <ListView
         android:id="@+id/listTerm"
         android:layout_width="match_parent"
         android:scrollbars="none"
-        android:layout_margin="10dp"
-        android:dividerHeight="5dp"
-        android:layout_height="match_parent"/>
+        android:listSelector="@android:color/transparent"
+        android:divider="@null"
+        android:layout_height="match_parent"
+        android:drawSelectorOnTop="false"
+        />
 </RelativeLayout>
